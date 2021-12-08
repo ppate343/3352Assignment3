@@ -4,10 +4,10 @@ import javax.swing.*;
 public class SubpageView {
     
     private models.ContentLinkModel model; 
-    private models.EmbeddedContent eModel; 
+    private models.EmbeddedContentModel eModel; 
     private controllers.addContentController controller; 
 
-    public SubpageView (models.ContentLinkModel model,models.EmbeddedContent eModel, controllers.addContentController controller ) {
+    public SubpageView (models.ContentLinkModel model,models.EmbeddedContentModel eModel, controllers.addContentController controller ) {
         
         this.setModel(model);   
 
@@ -41,12 +41,12 @@ public class SubpageView {
     }
 
     //geteModel method returns the value of embedded content model 
-    public models.EmbeddedContent geteModel(){
+    public models.EmbeddedContentModel geteModel(){
         return eModel; 
     }
 
     //seteModel method sets the value of embedded content model to model 
-    public void seteModel(models.EmbeddedContent eModel) {
+    public void seteModel(models.EmbeddedContentModel eModel) {
         this.eModel = eModel; 
     }
 
