@@ -52,5 +52,9 @@ public class MainPageView {
     }
 
 
+    public void printComment(String commentBody, String author, String grade) {
+    }
+
+
 
 }
