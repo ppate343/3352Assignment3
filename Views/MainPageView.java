@@ -51,7 +51,7 @@ public class MainPageView {
 
     }
 
-
+    //printComment method allows user to add comment
     public void printComment(String commentBody, String author, String grade) {
     }
 
