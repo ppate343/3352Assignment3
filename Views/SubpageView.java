@@ -7,6 +7,7 @@ public class SubpageView {
     private models.EmbeddedContentModel eModel; 
     private controllers.addContentController controller; 
 
+    //constructor for subpageview 
     public SubpageView (models.ContentLinkModel model,models.EmbeddedContentModel eModel, controllers.addContentController controller ) {
         
         this.setModel(model);   
@@ -20,7 +21,7 @@ public class SubpageView {
     public void addContentButton() {
 
         //allows user to click button to upload content 
-            JButton content = new JButton("addContent"); 
+        JButton content = new JButton("addContent"); 
 
 
     }
