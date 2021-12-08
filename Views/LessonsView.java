@@ -5,10 +5,11 @@ import java.util.ArrayList;
 
 public class LessonsView {
 
-    private ArrayList<models.CommentModel> pages = new ArrayList(); //array list to hold the pages
+    private ArrayList<models.ContentLinkModel> pages = new ArrayList(); //array list to hold the pages
     private models.ContentLinkModel model;  //available if teacher wants to add a content link
     private models.EmbeddedContentModel eModel; //available if teacher wants to add an embed to a lesson
     private models.TextModel tModel; //visible text on the lesson page
+    private models.CommentModel cModel; //comment available to teacher
     private controllers.addContentController controller; 
 
     public LessonsView(models.ContentLinkModel model, models.EmbeddedContentModel eModel, controllers.addContentController controller, models.TextModel tModel) {
@@ -57,17 +58,25 @@ public class LessonsView {
         this.tModel = tModel;
     }
 
+    //getter and setter for CommentModel
+    public models.CommentModel getcModel() {
+        return cModel;
+    }
+    public void setcModel(models.CommentModel cModel) {
+        this.cModel = cModel;
+    }
+
     public void displayPage() {
         //function to display lesson content on page
     }
 
     //add a page to the array
-    public void addPage(models.CommentModel page) {
+    public void addPage(models.ContentLinkModel page) {
         this.pages.add(page);
     }
 
     //delete a page from the array
-    public void deletePage(models.CommentModel page) {
+    public void deletePage(models.ContentLinkModel page) {
         this.pages.remove(page);
     }
     
