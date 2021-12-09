@@ -7,21 +7,20 @@ public class SubpageView {
     private models.ContentLinkModel model; 
     private models.TextModel tModel; 
     private models.EmbeddedContentModel eModel; 
-    private models.CommentModel cModel;
+
+    //we are assuming comments may only be added in the main page and not a subpage
 
     //adding controller
     private controllers.addContentController controller; 
 
     //constructor for subpageview 
-    public SubpageView (models.ContentLinkModel model,models.EmbeddedContentModel eModel, models.TextModel tModel, models.CommentModel cModel,  controllers.addContentController controller ) {
+    public SubpageView (models.ContentLinkModel model,models.EmbeddedContentModel eModel, models.TextModel tModel, controllers.addContentController controller ) {
         
         this.settModel(tModel); 
         
         this.setModel(model);   
 
-        this.seteModel(eModel); 
-
-        this.setcModel(cModel); 
+        this.seteModel(eModel);
          
         this.setController(controller); 
 
@@ -79,16 +78,6 @@ public class SubpageView {
     public void setModel(models.ContentLinkModel model) {
         this.model = model; 
 
-    }
-
-     //getcModel method returns the value of comment model as cModel
-     public models.CommentModel getcModel(){
-        return cModel; 
-    }
-
-    //setcModel method sets the value of comment Model to cModel
-    public void setcModel(models.CommentModel cModel) {
-        this.cModel = cModel; 
     }
 
     //getController method returns the value of add content controller to controller

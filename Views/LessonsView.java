@@ -9,7 +9,9 @@ public class LessonsView {
     private models.ContentLinkModel model;  //available if teacher wants to add a content link
     private models.EmbeddedContentModel eModel; //available if teacher wants to add an embed to a lesson
     private models.TextModel tModel; //visible text on the lesson page
-    private models.CommentModel cModel; //comment available to teacher
+
+    //we are assuming comments can only be added on a main page, and not in the lessons tab
+
     private controllers.addContentController controller; 
 
     public LessonsView(models.ContentLinkModel model, models.EmbeddedContentModel eModel, controllers.addContentController controller, models.TextModel tModel) {
@@ -46,7 +48,7 @@ public class LessonsView {
     public controllers.addContentController getController() {
         return controller;
     }
-    public void setController(addContentController controller) {
+    public void setController(controllers.addContentController controller) {
         this.controller = controller;
     }
 
@@ -56,14 +58,6 @@ public class LessonsView {
     }
     public void settModel(models.TextModel tModel) {
         this.tModel = tModel;
-    }
-
-    //getter and setter for CommentModel
-    public models.CommentModel getcModel() {
-        return cModel;
-    }
-    public void setcModel(models.CommentModel cModel) {
-        this.cModel = cModel;
     }
 
     public void displayPage() {

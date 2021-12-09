@@ -3,13 +3,13 @@ package controllers;
 
 public class addContentController {
 
-    models.TextModel textModel;
-    models.ContentLinkModel contentLinkModel;
-    models.EmbeddedContentModel embeddedContentModel;
+    private models.TextModel textModel;
+    private models.ContentLinkModel contentLinkModel;
+    private models.EmbeddedContentModel embeddedContentModel;
 
-    Views.LessonsView lessonsView;
-    Views.MainPageView mainPageView;
-    Views.SubpageView subpageView;
+    private Views.LessonsView lessonsView;
+    private Views.MainPageView mainPageView;
+    private Views.SubpageView subpageView;
 
     //------------ CONSTRUCTOR FOR EACH VIEW -----------------------------------
     
