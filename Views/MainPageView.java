@@ -88,24 +88,24 @@ public class MainPageView {
 
     }
 
-    //getController method returns the value of grade controller 
+    //getgController method returns the value of grade controller
     public controllers.GradeController getgController() {
         return gradeController; 
     }
 
-    //setController method sets the value of grade controller to gradeController
+    //setgController method sets the value of grade controller to gradeController
      public void setgController(controllers.GradeController gradeController) {
         this.gradeController = gradeController; 
 
     }
 
-    //getController method returns the value of add content controller to controller
+    //getController method returns the value of add content controller
     public controllers.addContentController getController() {
         return controller; 
 
     }
 
-    //setcontroller method sets the value of add content controller to controller
+    //setController method sets the value of add content controller to controller
     public void setController (controllers.addContentController controller) {
         this.controller = controller; 
     }
