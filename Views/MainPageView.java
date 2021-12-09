@@ -10,11 +10,11 @@ public class MainPageView {
     private models.EmbeddedContentModel eModel; 
 
     //adding controller
-    controllers.GradeController gradeController; 
-
+    private controllers.GradeController gradeController; 
+    private controllers.addContentController controller; 
 
     //constructor for mainpageview 
-    public MainPageView(models.CommentModel cModel, models.ContentLinkModel model,models.EmbeddedContentModel eModel, models.TextModel tModel, controllers.GradeController gradeController) {
+    public MainPageView(models.CommentModel cModel, models.ContentLinkModel model,models.EmbeddedContentModel eModel, models.TextModel tModel, controllers.GradeController gradeController, controllers.addContentController controller) {
 
         this.setcModel(cModel);
 
@@ -23,8 +23,10 @@ public class MainPageView {
         this.setModel(model);  
 
         this.seteModel(eModel);
-        
-        this.setController(gradeController); 
+
+        this.setgController(gradeController); 
+
+        this.setController(controller); 
     }
 
 
@@ -87,14 +89,25 @@ public class MainPageView {
     }
 
     //getController method returns the value of grade controller 
-    public controllers.GradeController getController() {
+    public controllers.GradeController getgController() {
         return gradeController; 
     }
 
     //setController method sets the value of grade controller to gradeController
-     public void setController(controllers.GradeController gradeController) {
+     public void setgController(controllers.GradeController gradeController) {
         this.gradeController = gradeController; 
 
+    }
+
+    //getController method returns the value of add content controller to controller
+    public controllers.addContentController getController() {
+        return controller; 
+
+    }
+
+    //setcontroller method sets the value of add content controller to controller
+    public void setController (controllers.addContentController controller) {
+        this.controller = controller; 
     }
 
     //printComment method allows user to add comment
