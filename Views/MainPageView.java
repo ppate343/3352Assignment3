@@ -3,13 +3,27 @@ package Views;
 
 public class MainPageView {
 
-    private models.CommentModel model;
+    //adding models
+    private models.CommentModel cModel;
+    private models.ContentLinkModel model; 
+    private models.TextModel tModel; 
+    private models.EmbeddedContentModel eModel; 
 
+    //adding controller
     controllers.GradeController gradeController; 
 
-    public MainPageView(models.CommentModel model,  controllers.GradeController gradeController) {
 
-        this.setModel(model);
+    //constructor for mainpageview 
+    public MainPageView(models.CommentModel cModel, models.ContentLinkModel model,models.EmbeddedContentModel eModel, models.TextModel tModel, controllers.GradeController gradeController) {
+
+        this.setcModel(cModel);
+
+        this.settModel(tModel); 
+
+        this.setModel(model);  
+
+        this.seteModel(eModel);
+        
         this.setController(gradeController); 
     }
 
@@ -32,14 +46,46 @@ public class MainPageView {
     }
 
     //getModel method returns the value of comment model
-    public models.CommentModel getModel(){
+    public models.CommentModel getcModel(){
+        return cModel; 
+    }
+
+    //setModel method sets the value of comment Model to cModel
+    public void setcModel(models.CommentModel cModel) {
+        this.cModel = cModel; 
+    }
+
+     //gettModel method returns the value of text  model 
+     public models.TextModel gettModel(){
+        return tModel; 
+    }
+
+    //settModel method sets the value of text model to tmodel 
+    public void settModel(models.TextModel tModel) {
+        this.tModel = tModel; 
+    }
+
+    //geteModel method returns the value of embedded content model 
+    public models.EmbeddedContentModel geteModel(){
+        return eModel; 
+    }
+
+    //seteModel method sets the value of embedded content model to model 
+    public void seteModel(models.EmbeddedContentModel eModel) {
+        this.eModel = eModel; 
+    }
+
+    //getModel method returns the value of content link model 
+    public models.ContentLinkModel getModel() {
         return model; 
     }
 
-    //setModel method sets the value of comment Model to model
-    public void setModel(models.CommentModel model) {
+    //setModel method sets the value of content link model to model 
+    public void setModel(models.ContentLinkModel model) {
         this.model = model; 
+
     }
+
     //getController method returns the value of grade controller 
     public controllers.GradeController getController() {
         return gradeController; 

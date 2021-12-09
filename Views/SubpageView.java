@@ -3,16 +3,25 @@ import javax.swing.*;
 
 public class SubpageView {
     
+    //adding models 
     private models.ContentLinkModel model; 
+    private models.TextModel tModel; 
     private models.EmbeddedContentModel eModel; 
+    private models.CommentModel cModel;
+    
+    //adding controllers
     private controllers.addContentController controller; 
 
     //constructor for subpageview 
-    public SubpageView (models.ContentLinkModel model,models.EmbeddedContentModel eModel, controllers.addContentController controller ) {
+    public SubpageView (models.ContentLinkModel model,models.EmbeddedContentModel eModel, models.TextModel tModel, models.CommentModel cModel,  controllers.addContentController controller ) {
+        
+        this.settModel(tModel); 
         
         this.setModel(model);   
 
         this.seteModel(eModel); 
+
+        this.setcModel(cModel); 
          
         this.setController(controller); 
 
@@ -41,6 +50,16 @@ public class SubpageView {
 
     }
 
+    //gettModel method returns the value of text  model 
+    public models.TextModel gettModel(){
+        return tModel; 
+    }
+
+    //settModel method sets the value of text model to tmodel 
+    public void settModel(models.TextModel tModel) {
+        this.tModel = tModel; 
+    }
+
     //geteModel method returns the value of embedded content model 
     public models.EmbeddedContentModel geteModel(){
         return eModel; 
@@ -60,6 +79,16 @@ public class SubpageView {
     public void setModel(models.ContentLinkModel model) {
         this.model = model; 
 
+    }
+
+     //getcModel method returns the value of comment model as cModel
+     public models.CommentModel getcModel(){
+        return cModel; 
+    }
+
+    //setcModel method sets the value of comment Model to cModel
+    public void setcModel(models.CommentModel cModel) {
+        this.cModel = cModel; 
     }
 
     //getController method returns the value of add content controller to controller
