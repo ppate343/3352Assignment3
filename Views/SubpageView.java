@@ -8,8 +8,8 @@ public class SubpageView {
     private models.TextModel tModel; 
     private models.EmbeddedContentModel eModel; 
     private models.CommentModel cModel;
-    
-    //adding controllers
+
+    //adding controller
     private controllers.addContentController controller; 
 
     //constructor for subpageview 
