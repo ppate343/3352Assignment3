@@ -18,6 +18,9 @@ public class addContentController {
         this.textModel = textModel;
         this.contentLinkModel = contentLinkModel;
         this.embeddedContentModel = embeddedContentModel;
+
+        //function to display content on lessons page
+        lessonsView.displayPage();
     }
 
     public addContentController(Views.MainPageView mainPageView, models.TextModel textModel, models.ContentLinkModel contentLinkModel, models.EmbeddedContentModel embeddedContentModel){
@@ -25,18 +28,31 @@ public class addContentController {
         this.textModel = textModel;
         this.contentLinkModel = contentLinkModel;
         this.embeddedContentModel = embeddedContentModel;
+
+        //function to display content on mainpage
+        mainPageView.show();
     }
 
     public addContentController(Views.SubpageView subpageView, models.TextModel textModel, models.ContentLinkModel contentLinkModel, models.EmbeddedContentModel embeddedContentModel){
         this.subpageView = subpageView;
         this.textModel = textModel;
         this.contentLinkModel = contentLinkModel;
-        this.embeddedContentModel = embeddedContentModel;        
+        this.embeddedContentModel = embeddedContentModel; 
+        
+        //function to display content on subpage
+        subpageView.show();
     }
 
     //--------- TEXT MODEL CONTROLS ---------------------------------------
 
-
+    //The getContent gets value of the text box model
+    public String getContent() {
+        return textModel.getContent();
+    }
+    //The setContent gets the value of the text box model
+    public void setContent(String content) {
+        setContent(content);
+    }
 
     //--------- CONTENT LINK CONTROLS -------------------------------------
 
@@ -102,20 +118,20 @@ public class addContentController {
         embeddedContentModel.setLinkTitle(linkTitle);
     }
 
-    //-------------- SEND INFO TO VIEWS ----------------------------------------
-
+    //------- DISPLAY CONTENT ON DIFFERENT VIEWS -----------------
+    
     public void updateLessonsView()
     {
-
+        lessonsView.displayPage();
     }
 
-    public void updateMainPage()
+    public void updateMainPageView()
     {
-
+        mainPageView.show();
     }
 
-    public void updateSubPage()
+    public void updateSubpageView()
     {
-
+        subpageView.show();
     }
 }
